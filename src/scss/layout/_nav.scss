@@ -1,0 +1,128 @@
+@use "../general/colors" as c;
+@use "../general/fonts" as f;
+
+nav {
+    background-color: c.$navBlack;
+    width: 100%;
+    height:13vh;
+    //!Full nav media
+    @media all and (max-width:768px) {
+        height: 13vh;
+    }
+
+
+    &>#main_nav_mobile {
+        display: flex;
+        align-items: center;
+        padding-bottom: 1rem;
+      & a:first-of-type{
+        flex-grow: 1;
+        
+      }
+      &>#mobileNavBtn{
+        padding-right: 2rem;
+        font-size: 1.50rem;
+        &:hover{
+            border:none;
+        }
+      }
+
+        //!Main nav mobile media
+        @media all and (min-width:769px) {
+            display: none;
+            
+      }
+    }
+
+
+    &>#main_nav_desktop {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10rem;
+        //!Main nav desktop media
+        @media all and (max-width:768px) {
+            display: none;
+        }
+    
+        & #imgNav{
+            flex-grow: 1;
+        }
+  
+        }
+        & a {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            font-family: f.$mainFont;
+            text-decoration: none;
+            font-size: 1.30rem;
+            flex-shrink: 1;
+            flex-grow: 0;
+            color: white;
+            letter-spacing: 1px;
+            font-size: 1.60rem;
+            display: inline-block;
+            &:hover{
+                border-bottom: 0.125rem solid c.$hoverClr;
+            
+            }
+            &:first-child{
+                &:hover{
+                    border-bottom: none;
+                }
+            }
+        }
+
+    }
+
+#activeMobileNavSec{
+    display: flex;
+    background-color: c.$mainSecClr;
+    position: absolute;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    height: 100%;
+    transition: width 1s;
+    & #logoActiveMobMenu{
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        
+    }
+    & #closeBtnSec{
+         position: absolute;
+         top: 4rem;
+         right: 2rem;
+         & a{
+            font-size: 2.25rem;
+         }
+    }
+    
+    &>#activeMobileNav{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       & div{
+        margin-bottom: 3rem;
+        & a {
+            @media all and (max-width:390px) {
+                font-size: 2rem;
+                
+            }
+            color: white;
+            text-decoration: none;
+            font-size: 2.30rem;
+            letter-spacing: 1px;
+            display: inline-block;
+            
+            &:hover{
+                border-bottom: 0.225rem solid c.$hoverClr;
+
+            }
+        }
+       }
+    }
+}
+

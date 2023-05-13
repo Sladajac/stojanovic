@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="./css/style.min.css">
+    <title>Stojanović/BarberShop</title>
+</head>
+
+<body>
+    <header>
+        <nav role="main">
+        <div id="main_nav_desktop">
+            <div id="imgNav"><a href="#"><img src="./images/LogoWhite.svg" width="210" alt=""></a></div>
+            <a href="#">Usluge</a>
+            <a href="#">Galerija</a>
+            <a href="#">Kontakt</a>
+          </div>
+          <div id="main_nav_mobile">
+            <a href="#"><img src="./images/LogoWhite.svg" width="210"></a>
+            <a href="#" id="mobileNavBtn"><i class="fa-solid fa-bars" style="color: #ffffff;"></i></a>
+          </div>
+        </nav>
+        <div id="activeMobileNavSec">
+            <div id="logoActiveMobMenu"><img src="./images/LogoWhite.svg" width="200"></div>
+            <div id="closeBtnSec"><a href="#" id="closeMobileNav"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></a></div>
+                <div id="activeMobileNav">
+                    <div><a href="#">Usluge</a></div>
+                    <div><a href="#">Galerija</a></div>
+                    <div><a href="#">Kontakt</a></div>
+                </div>
+            </div>
+            <!--! Banner section -->
+        <div id="bannerSection">
+              <div><h2 id="bannerTitle">Muski i Ženski frizer</h2></div>
+             
+              <div id="mobile_banner"><a class="smooth_scroll" href="#about_section">Vise o meni</a></div>
+       
+        </div>
+    </header>
+
+    <main>
+
+            <div id="about_section">
+                 <div id="about">
+                    <div id="about_image"><img src="./images/barberpoleBROWN.svg" width="30" alt=""></div>
+                      <div id="about_title"><h1>O meni</h1></div>
+                      <div id="about_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eveniet labore repellat quos adipisci officia, modi pariatur inventore ad officiis itaque a impedit earum esse reprehenderit! At consequatur quae fugiat!</div>
+                 </div> 
+            </div>
+            <div id="brojacSekcijaMobile">
+                <div class="brojac_mobile">
+                   <p><i class="fa-solid fa-user" ></i></p>
+                   <span class="brojBrojaca" data-val="250">000+</span>
+                   <span class="tekstBrojaca">Broj korisnika</span>
+               </div>
+               <div class="brojac_mobile">
+                   <p><i class="fa-solid fa-clock"></i></p>
+                   <span class="brojBrojaca" data-val="12">00+</span>
+                   <span class="tekstBrojaca">Godine iskustva</span>
+               </div>
+            </div>
+            <div id="price_list-sec">
+                 <div class="price-list">
+                    <div class="pl-title">Oblikovanje kose</div>
+                    <div class="pl-price">500din</div>
+                 </div>
+                 <div class="price-list">
+                    <div class="pl-title">Oblikovanje brade</div>
+                    <div class="pl-price">200din</div>
+                 </div>
+            </div>
+
+
+    </main>
+
+    <script src="./js/app.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+//!     Home
+
+@use "../general/fonts" as f;
+@use "../general/colors" as c;
+
+#bannerSection{
+   width: 100vw;
+   height: 90vh;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+    @media all and (min-width:1200px) {
+    background-image: url("../images/BarberBG_3840w.webp");
+    
+   }
+   @media all and (min-width:980px) and (max-width:1200px) {
+    background-image: url("../images/BarberBG_1920w.webp");
+   }
+   @media all and (max-width:768px) {
+    height: 87vh;
+   }
+   @media all and (max-width:979px) {
+    background-image: url("../images/BarberBG_1280w.webp");
+   }
+}
+
+#bannerSection{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    @media all and (max-width:768px) {
+        justify-content: space-evenly;
+        
+    }
+    gap: 1rem;
+}
+
+#bannerTitle{
+    background-color: c.$navBlack;
+     color: c.$mainSecClr;
+    text-transform: uppercase;
+    font-size: 5.25rem;
+    font-family: f.$bannerFont;
+    font-weight: 700;
+    margin-top: 4rem;
+    @media all and (max-width:600px) {
+        font-size: 2.25rem;
+        
+    }
+    @media all and (max-width:400px) {
+        font-size: 1.8rem;
+        
+    }
+    
+}
+
+#mobile_banner {
+    padding-bottom: 2rem;
+    & a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.9rem;
+        cursor: pointer;
+        z-index: -2;
+    }
+    @media all and (min-width:768px) {
+        display: none;
+        
+    }
+}
+main{
+    padding-top: 2rem;
+    width: 100vw;
+    height: 150vh;
+    background-color: c.$mainSecClr ;
+}
+
+
+#about_section{
+    background-color: c.$navBlack;
+    height: 32vh;
+    padding-top: 0.625rem;
+    @media all and (max-width:768px) {
+        margin: auto;
+        width: 90%;
+
+        padding-bottom: 3rem;
+    }
+
+    &>#about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    & #abot_image{
+       margin-top: 1rem;
+    }
+    & #about_title{
+        margin: 0;
+        padding-bottom: 1rem;
+        text-align: center;
+        letter-spacing: 1px;
+        & h1{
+            margin: 0;
+           color: white;
+        }
+    }
+    & #about_text{
+        text-align: center;
+        color: white;
+        font-size: 1.3rem;
+        @media all and (max-width:510px) {
+            font-size: 1rem;
+            
+        }
+        
+    }
+
+
+}
+.smooth_scroll{
+    scroll-behavior: smooth;
+}
+
+
+    #brojacSekcijaMobile{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        @media all and (min-width:768px) {
+           flex-direction: row;
+            
+        }
+    }
+    .brojac_mobile{
+        width: 50vmin;
+        height: 30vmin;
+        @media all and (max-width:600px) {
+            width: 100vw;
+            height: 50vmin;
+            border-radius: 0;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1em 0;
+        position: relative;
+        font-size: 16px;
+        border-radius: 0.5em;
+        background-color: c.$navBlack;
+        border-bottom: 10px solid c.$mainSecClrDark;
+        align-items: center;
+        & p{
+            font-size: 2rem;
+        }
+        & i {
+            
+            color: c.$mainSecClr;
+        }
+    }    
+
+    .brojBrojaca{
+        color: #ffffff;
+        display: grid;
+        place-items: center;
+        font-weight: 600;
+        font-size: 3em;
+        @media all and (max-width:600px) {
+            font-size: 2rem;
+            
+        }
+    }
+        .tekstBrojaca  {
+            color: #e0e0e0;
+            font-size: 1.5em;
+            text-align: center;
+            pad: 0.7em 0;
+            font-weight: 400;
+            line-height: 0;
+        }
+
+#price_list-sec{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
+}
+.price-list{
+    display: flex;
+    flex-direction: row;
+    .pl-title{
+        @media all and ( max-width:768px) {
+            width: 50vw;
+            
+        }
+        @media all and ( max-width:480px) {
+         font-size: 1.5rem;
+        }
+        @media all and ( max-width:390px) {
+            font-size: 1.3rem;
+           }
+        width: 35vh;
+        background-color: c.$navBlack;
+        color: white;
+        display: flex;
+        text-align: center;
+        font-size: 1.8rem;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0.5rem;
+        text-transform: uppercase;
+        border-bottom: 0.325rem solid c.$mainSecClrDark;
+    }
+    .pl-price{ 
+        @media all and ( max-width:768px) {
+            width: 50vw;
+            
+        }
+        @media all and ( min-width:980px) {
+            width: 30vw;
+            
+        }
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:30vh;
+        height: 20vh;
+        background-color: #5e5b5b;
+        color: white;
+        border-bottom: 0.325rem solid c.$mainSecClrDark;
+        border-right:0.325rem solid c.$mainSecClrDark ;
+    }
+}
+
+
